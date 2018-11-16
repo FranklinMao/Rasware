@@ -43,7 +43,7 @@ int main(void) {
 	
 	distval = ADCRead(dist);
         Printf("IR sensor value is %f\n", distval); //%f is the escape character for floats
-	SetMotor(left, -1.0);  
+	SetMotor(left, 1.0);  
 	SetMotor(right, -1.0);
 
         switch(ch) {
