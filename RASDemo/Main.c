@@ -1,10 +1,11 @@
 #include "RASDemo.h"
-
+#
 #include <RASLib/inc/common.h>
 #include <RASLib/inc/gpio.h>
 #include <RASLib/inc/time.h>
 #include <RASLib/inc/adc.h>
 #include <RASLib/inc/motor.h>
+#include <RASLib/inc/linesensor.h>
 
 tBoolean led_on;
 
@@ -17,6 +18,9 @@ void blink(void) {
 
 int main(void) {  
     char ch;
+  //  tLineSensor *line = InitializeGPIOLineSensor(PIN_xx, PIN_xx, PIN_xx, PIN_xx, PIN_xx, PIN_xx, PIN_xx, PIN_xx); 
+ //These are the eight pins you chose in the proper order
+//    float linevals[8];
     //tADC *dist = InitializeADC(PIN_B4);
     //float distval;
     //tMotor *left = InitializeServoMotor(PIN_B0, true);
@@ -45,7 +49,10 @@ int main(void) {
         //Printf("IR sensor value is %f\n", distval); //%f is the escape character for floats
 	//SetMotor(left, 1.0);  
 	//SetMotor(right, -1.0);
-
+//       LineSensorReadArray(line, linevals);
+   //    Printf(“%f\t%f\t%f\t%f\t%f\t%f\t%f\t%f\t%f\t”, value[0], value[1], value[2], 
+ //      value[3], value[4], value[5], value[6], value[7]); 
+  // \t is the escape character for tabs
         switch(ch) {
             case '0':
                 Printf("\nUART Demo\n");
