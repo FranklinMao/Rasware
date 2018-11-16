@@ -4,6 +4,7 @@
 #include <RASLib/inc/gpio.h>
 #include <RASLib/inc/time.h>
 #include <RASLib/inc/adc.h>
+#include <RASLib/inc/motor.h>
 
 tBoolean led_on;
 
@@ -16,6 +17,10 @@ void blink(void) {
 
 int main(void) {  
     char ch;
+    tADC *dist = InitializeADC(PIN_B4);
+    float distval;
+    tMotor *left = InitializeServoMotor(PIN_B0, true);
+    tMotor *right = InitializeServoMotor(PIN_B1, false);
 
     CallEvery(blink, 0, 0.25f);
 
@@ -35,6 +40,11 @@ int main(void) {
         // Read input from user
         ch = Getc();
         Printf("\n");
+	
+	distval = ADCRead(dist);
+        Printf("IR sensor value is %f\n", distval); //%f is the escape character for floats
+	SetMotor(left, 1.0);  
+	SetMotor(right, -1.0);
 
         switch(ch) {
             case '0':
