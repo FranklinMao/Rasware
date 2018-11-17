@@ -26,9 +26,16 @@ int main(void) {
     tMotor *left = InitializeServoMotor(PIN_B0, true);
     tMotor *right = InitializeServoMotor(PIN_B1, false);
 
-    CallEvery(blink, 0, 0.25f);
+	while (1){
+		SetMotor(left, 1.0);  
+	   SetMotor(right, -1.0);
+    }
+		
+	
+ /*   CallEvery(blink, 0, 0.25f);
 
     while (1) {
+	    
         Printf("\nRAS Demo for Robotathon 2013\n"
                "  0=UART Demo\n"
 	       "  1=Motor Demo\n"
@@ -40,15 +47,14 @@ int main(void) {
 	       "  7=GPIO Line Sensor Demo\n"
                "  8=Sonar Demo\n"
                ">> ");
-        
+*/        
         // Read input from user
      //   ch = Getc();
       //  Printf("\n");
 	
 	//distval = ADCRead(dist);
         //Printf("IR sensor value is %f\n", distval); //%f is the escape character for floats
-	//SetMotor(left, 1.0);  
-	//SetMotor(right, -1.0);
+	//
 //       LineSensorReadArray(line, linevals);
    //    Printf(“%f\t%f\t%f\t%f\t%f\t%f\t%f\t%f\t%f\t”, value[0], value[1], value[2], 
  //      value[3], value[4], value[5], value[6], value[7]); 
@@ -97,6 +103,6 @@ int main(void) {
                 initSonar();
                 sonarDemo();
                 break;	*/
-        }
+        
     
 }
