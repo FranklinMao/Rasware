@@ -30,7 +30,7 @@ int main(void) {
 		SetMotor(left, 1.0);  
 	   SetMotor(right, -1.0);
     }
-		
+}
 	
  /*   CallEvery(blink, 0, 0.25f);
 
@@ -105,4 +105,4 @@ int main(void) {
                 break;	*/
         
     
-}
+
