@@ -23,8 +23,8 @@ int main(void) {
 //    float linevals[8];
     //tADC *dist = InitializeADC(PIN_B4);
     //float distval;
-    //tMotor *left = InitializeServoMotor(PIN_B0, true);
-    //tMotor *right = InitializeServoMotor(PIN_B1, false);
+    tMotor *left = InitializeServoMotor(PIN_B0, true);
+    tMotor *right = InitializeServoMotor(PIN_B1, false);
 
     CallEvery(blink, 0, 0.25f);
 
@@ -47,8 +47,8 @@ int main(void) {
 	
 	//distval = ADCRead(dist);
         //Printf("IR sensor value is %f\n", distval); //%f is the escape character for floats
-	//SetMotor(left, 1.0);  
-	//SetMotor(right, -1.0);
+	SetMotor(left, 1.0);  
+	SetMotor(right, -1.0);
 //       LineSensorReadArray(line, linevals);
    //    Printf(“%f\t%f\t%f\t%f\t%f\t%f\t%f\t%f\t%f\t”, value[0], value[1], value[2], 
  //      value[3], value[4], value[5], value[6], value[7]); 
