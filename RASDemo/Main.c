@@ -1,5 +1,5 @@
 #include "RASDemo.h"
-#
+
 #include <RASLib/inc/common.h>
 #include <RASLib/inc/gpio.h>
 #include <RASLib/inc/time.h>
@@ -17,7 +17,7 @@ void blink(void) {
 }
 
 int main(void) {  
-    char ch;
+ //   char ch;
   //  tLineSensor *line = InitializeGPIOLineSensor(PIN_xx, PIN_xx, PIN_xx, PIN_xx, PIN_xx, PIN_xx, PIN_xx, PIN_xx); 
  //These are the eight pins you chose in the proper order
 //    float linevals[8];
@@ -42,13 +42,13 @@ int main(void) {
                ">> ");
         
         // Read input from user
-        ch = Getc();
-        Printf("\n");
+     //   ch = Getc();
+      //  Printf("\n");
 	
 	//distval = ADCRead(dist);
         //Printf("IR sensor value is %f\n", distval); //%f is the escape character for floats
-	SetMotor(left, 1.0);  
-	SetMotor(right, -1.0);
+	//SetMotor(left, 1.0);  
+	//SetMotor(right, -1.0);
 //       LineSensorReadArray(line, linevals);
    //    Printf(“%f\t%f\t%f\t%f\t%f\t%f\t%f\t%f\t%f\t”, value[0], value[1], value[2], 
  //      value[3], value[4], value[5], value[6], value[7]); 
@@ -98,5 +98,5 @@ int main(void) {
                 sonarDemo();
                 break;	*/
         }
-    }
+    
 }
