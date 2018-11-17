@@ -28,7 +28,7 @@ int main(void) {
 
 	while (1){
 		SetMotor(left, 1.0);  
-	   SetMotor(right, -1.0);
+	   SetMotor(right, 1.0);
     }
 }
 	
