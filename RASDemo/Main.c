@@ -53,7 +53,7 @@ int main(void) {
    //    Printf(“%f\t%f\t%f\t%f\t%f\t%f\t%f\t%f\t%f\t”, value[0], value[1], value[2], 
  //      value[3], value[4], value[5], value[6], value[7]); 
   // \t is the escape character for tabs
-        switch(ch) {
+       /* switch(ch) {
             case '0':
                 Printf("\nUART Demo\n");
                 uartDemo();                 
@@ -96,7 +96,7 @@ int main(void) {
                 Printf("\nSonar Demo\n");
                 initSonar();
                 sonarDemo();
-                break;
+                break;	*/
         }
     }
 }
